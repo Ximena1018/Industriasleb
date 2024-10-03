@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Proveedor e Insumo</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/operario.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stilo.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="container" id="header">
+        <h1 title="Operario">Operario</h1>
+        <div class="form-section">
+            <div class="form-group">
+                <label title="Tipo de documento" for="tipo-documento"><span class="material-icons icon-green">description</span> Tipo de Documento</label>
+                <select title="Seleccione tipo de documento" class="input" id="tipo-documento">
+                    <option value="dni">-</option>
+                    <option title="Cédula Ciudadania" value="dni">Cédula Ciudadania</option>
+                    <option title="Cédula Extranjeria" value="ruc">Cédula Extranjeria</option>
+                    <option title="Pasaporte" value="pas">Pasaporte</option>
+                </select>
+                <br><br>
+                <label title="Número de documento" for="numero-documento"><span class="material-icons icon-green">confirmation_number</span> Número de Documento</label>
+                <input title="Ingrese número de documento" class="input" type="text" id="numero-documento" placeholder="Ingrese número de documento">
+                <br><br>
+                <label title="Nombre" for="nombre"><span class="material-icons icon-green">person</span> Nombre</label>
+                <input title="Ingrese nombre" class="input" type="text" id="nombre" placeholder="Ingrese nombre">
+                <br><br>
+                <label title="Apellido" for="apellido"><span class="material-icons icon-green">person</span> Apellido</label>
+                <input title="Ingrese apellido" class="input" type="text" id="apellido" placeholder="Ingrese apellido">
+                <br><br>
+                <label title="ARL" for="arl"><span class="material-icons icon-green">business</span> Arl</label>
+                <input  title="Ingrese ARL" class="input" type="text" id="arl"  placeholder=" Ingrese ARL">
+                <br><br>
+                <label title="EPS" for="eps"><span class="material-icons icon-green">business</span> Eps</label>
+                <input title="Ingrese EPS" class="input" type="text" id="eps" placeholder=" Ingrese EPS">
+            </div>
+
+            <div class="form-group">
+                <label title="Pension" for="pension"><span class="material-icons icon-green">business</span> Pension</label>
+                <input title="Ingrese Pension" class="input" type="text" id="pension" placeholder=" Ingrese Pension">
+                <br><br>
+                <label title="RH"  for="rh"><span class="material-icons icon-green">bloodtype</span> RH</label>
+                <input title="Ingrese RH" class="input" type="text" id="rh" placeholder=" Ingrese RH">
+                <br><br>
+                <label title="Correo Electronico" for="email"><span class="material-icons icon-green">email</span> Correo Electrónico</label>
+                <input title="Ingrese correo electronico" class="input" type="email" id="email" placeholder=" Ingrese correo electronico">
+                <br><br>
+                <label title="Número de teléfono" for="telefono"><span class="material-icons icon-green">phone</span> Número de Teléfono</label>
+                <input title="Ingrese número teléfono" class="input" type="text" id="ntelefono" placeholder=" Ingrese número teléfono">
+                <br><br>
+                <label title="Número de emergencia" for="etelefono"><span class="material-icons icon-green">phone_in_talk</span> Número de Emergencia</label>
+                <input title="Ingrese número de telefono" class="input" type="text" id="etelefono" placeholder=" Ingrese número de telefono">
+            </div>
+        </div>
+        <div class="buttons">
+            <button title="Agregar" type="button" onclick="validarYAgregarInventario()">AGREGAR</button>
+            <button title="Buscar" type="button">BUSCAR</button>
+            <button title="Modificar" type="button">MODIFICAR</button>
+        </div>
+    </div>
+
+    <div class="margen"></div>
+    
+    <a class="volver" title="Industrias LEB" href="{% url 'indexcarucel' %}"><img src="{% static 'imagenes/logo leb.png' %}" alt="" width="120px" height="100px" ></a>
+    <nav class="navegardor">
+    <a href="{% url 'usuario' %}">
+        <img class="login" title="Login" src="{% static 'iconos/person_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg' %}" alt="" width="50px" height="50px">
+    </a>
+    <ul class="redirecciones .redirecciones_visible">
+        <li class="Item-menu">
+            <a href="{% url 'OrdenTrabajo' %}" class="link-menu-redireccion nav-link" title="Orden de trabajo">Orden Trabajo</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'actividad' %}" class="link-menu-redireccion nav-link" title="Actividad">Actividad</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'facturacion' %}" class="link-menu-redireccion nav-link" title="Facturación">Facturación</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'facturas' %}" class="link-menu-redireccion nav-link" title="Facturas">Facturas</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'maquinaria' %}" class="link-menu-redireccion nav-link" title="Maquinaria">Maquinaria</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'operario' %}" class="link-menu-redireccion nav-link" title="Operario">Operario</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'insumoproveedor' %}" class="link-menu-redireccion nav-link" title="Proveedor e Insumo">Proveedor-Insumo</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'inventario' %}" class="link-menu-redireccion nav-link" title="Inventario">Inventario</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'clientes' %}" class="link-menu-redireccion nav-link" title="Clientes">Clientes</a>
+        </li>
+    </ul>
+</nav>
+<div class="margen1"></div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+    <body class="normal-text">
+        <div class="accessibility-container" title="Accesibilidad">
+            <div class="accessibility-icon" id="accessibilityIcon">
+                <i class="fas fa-universal-access"></i>
+            </div>
+            <div class="accessibility-menu" id="accessibilityMenu">
+                <div class="menu-item" data-action="increase-text">
+                    <i class="fas fa-plus"></i>
+                    <span title="Aumentar texto">Aumentar texto</span>
+                </div>
+                <div class="menu-item" data-action="decrease-text">
+                    <i class="fas fa-minus"></i>
+                    <span title="Disminuir texto">Disminuir texto</span>
+                </div>
+                <div class="menu-item" data-action="high-contrast">
+                    <i class="fas fa-low-vision"></i>
+                    <span tilte="Contraste">Contraste alto</span>
+                </div>
+                <div class="menu-item" data-action="activate-reader">
+                    <i class="fas fa-volume-up"></i>
+                    <span title="Activar lector">Activar lector</span>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'js/scrip.js' %}"></script>
+    </body>
+</body>
+</html>

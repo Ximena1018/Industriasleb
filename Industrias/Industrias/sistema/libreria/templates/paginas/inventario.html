@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Proveedores e Insumos</title>
+    <link rel="stylesheet" href="{% static 'css/inventario.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stilo.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="margen"></div>
+    <a class="volver" title="Industrias LEB" href="{% url 'indexcarucel' %}"><img src="{% static 'imagenes/logo leb.png' %}" alt="" width="120px" height="100px" ></a>
+    <div class="container" id="header">
+        <h1 title="Inventario de Proveedores e Insumos">Inventario de Proveedores e Insumos</h1>
+        <div id="tabla-inventario">
+            <!-- Aquí se generará dinámicamente la tabla de inventario -->
+        </div>
+    </div>
+
+    <script>
+        // Simulación de datos de inventario (formato JSON)
+        var inventario = [
+            {
+                "id": 1,
+                "proveedor": {
+                    "razon_social": "Proveedor 1",
+                    "tipo_documento": "RUC",
+                    "numero_documento": "123456789",
+                    "telefono": "987654321",
+                    "email": "proveedor1@example.com"
+                },
+                "insumo": {
+                    "tipo": "Insumo 1",
+                    "cantidad": 10,
+                    "valor": "$100",
+                    "marca": "Marca A",
+                    "unidad_medida": "Unidad"
+                }
+            },
+            {
+                "id": 2,
+                "proveedor": {
+                    "razon_social": "Proveedor 2",
+                    "tipo_documento": "DNI",
+                    "numero_documento": "987654321",
+                    "telefono": "123456789",
+                    "email": "proveedor2@example.com"
+                },
+                "insumo": {
+                    "tipo": "Insumo 2",
+                    "cantidad": 5,
+                    "valor": "$50",
+                    "marca": "Marca B",
+                    "unidad_medida": "Unidad"
+                }
+            }
+            // Puedes añadir más elementos según sea necesario
+        ];
+
+        // Función para generar la tabla de inventario
+        function generarTablaInventario() {
+            var tabla = '<table>';
+            tabla += '<thead><tr>';
+            tabla += '<th title="ID">ID</th>';
+            tabla += '<th title="Razón social">Razón Social</th>';
+            tabla += '<th title="Tipo documento">Tipo Documento</th>';
+            tabla += '<th title="Número documento">Número Documento</th>';
+            tabla += '<th title="Teléfono">Teléfono</th>';
+            tabla += '<th title="correo electronico">Correo electronico</th>';
+            tabla += '<th title="Tipo insumo">Tipo de Insumo</th>';
+            tabla += '<th title="Cantidad">Cantidad</th>';
+            tabla += '<th title="Valor">Valor</th>';
+            tabla += '<th title="Marca">Marca</th>';
+            tabla += '<th title="Unidad de medida">Unidad de Medida</th>';
+            tabla += '</tr></thead>';
+            tabla += '<tbody>';
+            
+            for (var i = 0; i < inventario.length; i++) {
+                tabla += '<tr>';
+                tabla += '<td>' + inventario[i].id + '</td>';
+                tabla += '<td>' + inventario[i].proveedor.razon_social + '</td>';
+                tabla += '<td>' + inventario[i].proveedor.tipo_documento + '</td>';
+                tabla += '<td>' + inventario[i].proveedor.numero_documento + '</td>';
+                tabla += '<td>' + inventario[i].proveedor.telefono + '</td>';
+                tabla += '<td>' + inventario[i].proveedor.email + '</td>';
+                tabla += '<td>' + inventario[i].insumo.tipo + '</td>';
+                tabla += '<td>' + inventario[i].insumo.cantidad + '</td>';
+                tabla += '<td>' + inventario[i].insumo.valor + '</td>';
+                tabla += '<td>' + inventario[i].insumo.marca + '</td>';
+                tabla += '<td>' + inventario[i].insumo.unidad_medida + '</td>';
+                tabla += '</tr>';
+            }
+
+            tabla += '</tbody></table>';
+            document.getElementById('tabla-inventario').innerHTML = tabla;
+        }
+
+        // Llamar a la función para generar la tabla al cargar la página
+        window.onload = function() {
+            generarTablaInventario();
+        };
+    </script>
+        <nav class="navegardor">
+        <a href="{% url 'usuario' %}">
+            <img class="login" title="Login" src="{% static 'iconos/person_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg' %}" alt="" width="50px" height="50px">
+        </a>
+        <ul class="redirecciones .redirecciones_visible">
+            <li class="Item-menu">
+                <a href="{% url 'OrdenTrabajo' %}" class="link-menu-redireccion nav-link" title="Orden de trabajo">Orden Trabajo</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'actividad' %}" class="link-menu-redireccion nav-link" title="Actividad">Actividad</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'facturacion' %}" class="link-menu-redireccion nav-link" title="Facturación">Facturación</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'facturas' %}" class="link-menu-redireccion nav-link" title="Facturas">Facturas</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'maquinaria' %}" class="link-menu-redireccion nav-link" title="Maquinaria">Maquinaria</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'operario' %}" class="link-menu-redireccion nav-link" title="Operario">Operario</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'insumoproveedor' %}" class="link-menu-redireccion nav-link" title="Proveedor e Insumo">Proveedor-Insumo</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'inventario' %}" class="link-menu-redireccion nav-link" title="Inventario">Inventario</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'clientes' %}" class="link-menu-redireccion nav-link" title="Clientes">Clientes</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="margen1"></div>
+    <body class="normal-text">
+        <div class="accessibility-container" title="Accesibilidad">
+            <div class="accessibility-icon" id="accessibilityIcon">
+                <i class="fas fa-universal-access"></i>
+            </div>
+            <div class="accessibility-menu" id="accessibilityMenu">
+                <div class="menu-item" data-action="increase-text">
+                    <i class="fas fa-plus"></i>
+                    <span title="Aumentar texto">Aumentar texto</span>
+                </div>
+                <div class="menu-item" data-action="decrease-text">
+                    <i class="fas fa-minus"></i>
+                    <span title="Disminuir texto">Disminuir texto</span>
+                </div>
+                <div class="menu-item" data-action="high-contrast">
+                    <i class="fas fa-low-vision"></i>
+                    <span tilte="Contraste">Contraste alto</span>
+                </div>
+                <div class="menu-item" data-action="activate-reader">
+                    <i class="fas fa-volume-up"></i>
+                    <span title="Activar lector">Activar lector</span>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'js/scrip.js' %}"></script>
+    </body>
+</body>
+</html>

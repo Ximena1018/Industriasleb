@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cliente</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="{% static 'css/cliente.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stilo.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="margen"></div>
+    
+    <a class="volver" title="Industrias LEB" href="{% url 'indexcarucel' %}"><img src="{% static 'imagenes/logo leb.png' %}" alt="" width="120px" height="100px" ></a>
+    <nav class="navegador">
+        <a href="{% url 'usuario' %}">
+            <img class="login" src="{% static 'iconos/person_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg' %}" alt="" width="50px" height="50px">
+        </a>
+        <ul class="redirecciones redirecciones_visible">
+            <li class="Item-menu">
+                <a href="{% url 'OrdenTrabajo' %}" class="link-menu-redireccion nav-link" title="Orden de trabajo">Orden Trabajo</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'actividad' %}" class="link-menu-redireccion nav-link" title="Actividad">Actividad</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'facturacion' %}" class="link-menu-redireccion nav-link" title="Facturación">Facturación</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'facturas' %}" class="link-menu-redireccion nav-link" title="Facturas">Facturas</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'maquinaria' %}" class="link-menu-redireccion nav-link" title="Maquinaria">Maquinaria</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'operario' %}" class="link-menu-redireccion nav-link" title="Operario">Operario</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'insumoproveedor' %}" class="link-menu-redireccion nav-link" title="Proveedor e Insumo">Proveedor-Insumo</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'inventario' %}" class="link-menu-redireccion nav-link" title="Inventario">Inventario</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'clientes' %}" class="link-menu-redireccion nav-link" title="Clientes">Clientes</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="login-form">
+        <form class="container" id="header">
+            <h1 title="Clientes">Clientes</h1>
+            <div class="form-left">
+                <div class="form-group" id="header1">
+                    <img src="{% static 'imagenees/assignment_ind_24dp_314D1C_FILL0_wght400_GRAD0_opsz24.png' %}" height="20px">
+                    <label title="Tipo de documento" for="tipo-documento">Tipo de Documento:</label>
+                    <select class="input" id="tipo-documento" name="tipo-documento" placeholder="">
+                        <option title="Seleccione el tipo de documento" value="dni">-</option>
+                        <option title="Cédula ciudadania" value="dni">Cédula Ciudadania</option>
+                        <option title="Cedula extranjeria" value="pasaporte">Cedula Extranjería</option>
+                        <option title="Pasaporte" value="cedula">Pasaporte</option>
+                    </select>
+                </div>
+                <div class="form-group" id="header1">
+                    <img src="{% static 'imagenees/icono2.png' %}" height="20px">
+                    <label title="Documento" for="documento">Documento:</label>
+                    <input title="Ingrese el número de documento" class="input" type="text" id="documento" name="documento" placeholder="Ingrese número de documento">
+                </div>
+                <div class="form-group">
+                    <img src="{% static 'imagenees/person_24dp_314D1C_FILL0_wght400_GRAD0_opsz24.png' %}" height="20px">
+                    <label title="Nombre completo" for="nombre">Nombre Completo:</label>
+                    <input title="Ingrese nombre completo del cliente" class="input" type="text" id="nombre" name="nombre" placeholder="Ingrese nombre completo">
+                </div>
+                
+                <div class="form-group" id="header1">
+                    <img src="{% static 'imagenees/mail_24dp_314D1C_FILL0_wght400_GRAD0_opsz24.png' %}" height="20px">
+                    <label title="Correo" for="correo">Correo:</label>
+                    <input title="Ingrese el correo electronico del cliente" class="input" type="email" id="correo" name="correo" placeholder="Ingrese correo electronico">
+                </div>
+                <div class="form-group" id="header1">
+                    <img src="{% static 'imagenees/pin_drop_24dp_314D1C_FILL0_wght400_GRAD0_opsz24.png' %}" height="20px">
+                    <label title="Dirección" for="direccion">Dirección:</label>
+                    <input title="Ingrese dirección" class="input" type="text" id="direccion" name="direccion" placeholder="Ingrese dirección">
+                </div>
+                <div class="form-group" id="header1">
+                    <img src="{% static 'imagenees/settings_phone_24dp_314D1C_FILL0_wght400_GRAD0_opsz24.png' %}" height="20px">
+                    <label title="Teléfono" for="telefono">Teléfono:</label>
+                    <input title="Ingrese un número de teléfono" class="input" type="tel" id="telefono" name="telefono" placeholder=" Ingrese número de teléfono">
+                </div>
+            </div>
+            <div class="form-right" id="header1">
+                <div class="button-group" id="header1">
+                    <button title="Guardar" type="submit" class="button-save">Guardar</button>
+                    <button title="Modificar" type="button" class="button-modify">Modificar</button>
+                    <button title="Eliminar" type="button" class="button-delete">Eliminar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="margen1"></div>
+    <body class="normal-text">
+        <div class="accessibility-container" title="Accesibilidad">
+            <div class="accessibility-icon" id="accessibilityIcon">
+                <i class="fas fa-universal-access"></i>
+            </div>
+            <div class="accessibility-menu" id="accessibilityMenu">
+                <div class="menu-item" data-action="increase-text">
+                    <i class="fas fa-plus"></i>
+                    <span title="Aumentar texto">Aumentar texto</span>
+                </div>
+                <div class="menu-item" data-action="decrease-text">
+                    <i class="fas fa-minus"></i>
+                    <span title="Disminuir texto">Disminuir texto</span>
+                </div>
+                <div class="menu-item" data-action="high-contrast">
+                    <i class="fas fa-low-vision"></i>
+                    <span title="Contraste alto">Contraste alto</span>
+                </div>
+                <div class="menu-item" data-action="activate-reader">
+                    <i class="fas fa-volume-up"></i>
+                    <span title="Activar lector">Activar lector</span>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'js/scrip.js' %}"></script>
+    </body>
+</html>

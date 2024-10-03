@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cuadro {
+    background: none;
+    border: none;
+    width: 500px;
+    height: 800px;
+}
+
+.tex1 {
+    text-align: center;
+    font-size: xx-large;
+    color: black;
+    margin-top: -650px;
+    font-weight: 900;
+}
+
+.volver {
+    position: absolute;
+    margin-top: -800px;
+    margin-left: 20px;
+}
+
+.margen {
+    position: absolute;
+    width: 1535px;
+    height: 100px;
+    background-color: #114004;
+}
+
+.login {
+    position: absolute;
+    margin-top: -773px;
+    margin-left: 1440px;
+}
+
+.login:hover {
+    border-radius: 50px;
+    background-color: green;
+    transition: 0.8s;
+}
+
+.redirecciones {
+    position: absolute;
+    margin-top: -760px;
+    display: flex;
+    margin-left: 360px;
+    list-style: none;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.item-menu {
+    font-size: 18px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.link-menu-redireccion {
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.link-menu-redireccion:hover {
+    border-radius: 20px;
+    background-color: #7ab005;
+    transition: 0.8s;
+}
+
+.margen1{
+    background-color: #114004;
+    position: absolute;
+    margin-top: 1100px;
+    margin-left: -30px;
+    width:1550px; 
+    height:400px;
+}
+
+.containerFormulario {
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0 10px #4CAF50;
+    width: 1000px;
+    margin: 0 auto; 
+    padding: 20px; 
+    margin-top: -550px; 
+}
+
+#formulario,
+#Formulario1,
+.Formulario2 {
+    width: calc(100% - 20px); 
+
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 15px; 
+    box-sizing: border-box; 
+}
+
+.button-container {
+    text-align: center; 
+}
+
+button {
+    background-color: #114004;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    width: 180px;
+    height: 40px;
+    margin: 10px; 
+    margin-left: 23px;
+}
+
+button:hover {
+    background-color: #7ab005;
+}
+
+.tituulo {
+    text-align: center; 
+    font-weight: bold;
+    font-size: xx-large;
+    margin-top: 50px;
+}

@@ -1,0 +1,222 @@
+/* 
+.navegador{
+    display: flex;
+    justify-content: space-between;
+}
+.volver{
+    position: absolute;
+    margin-top: -2px;
+    margin-left: 40px;
+    
+}
+.margen{
+    position: absolute;
+    margin-top: 0px;
+}
+.login{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 1440px;
+}
+.login:hover{
+    border-radius: 50px;body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+     */
+    .navegador{
+        display: flex;
+        justify-content: space-between;
+    }
+    .volver{
+        position: absolute;
+        margin-top: -725px;
+        margin-left: -1360px;
+        
+    }
+    .margen {
+        position: absolute;
+        width: 1535px;
+        height: 100px;
+        background-color: #114004;
+        margin-top: -725px;
+    }
+    .login{
+        position: absolute;
+        margin-top: -390px;
+        margin-left: 680px;
+    }
+    .login:hover{
+        border-radius: 50px;
+        background-color: green;
+        transition: 0.8s;
+    }
+    .redirecciones{
+        position: absolute;
+        margin-top: -370px;
+        display: flex;
+        list-style: none;
+        font-weight: bold;
+        font-size: medium;
+        margin-left: -360px;
+    }
+    .item-menu{
+        font-size: 18px;
+        margin: 0 10px;
+        text-transform: uppercase;
+        width: max-content;
+        
+    }
+    .link-menu-redireccion{
+        padding: 8px 12px;
+        border-radius: 4px;
+        color: aliceblue;
+        text-decoration: none;
+    }
+    .link-menu-redireccion:hover{
+        border-radius: 20px;
+       background-color: #7ab005;
+       transition: 0.8s;
+    background-color: green;
+    transition: 0.8s;
+}
+/* .redirecciones{
+    position: absolute;
+    margin-top: -370px;
+    display: flex;
+    margin-left: 595px;
+    list-style: none;
+    font-weight: bold;
+    font-size: medium;
+   
+} */
+.item-menu{
+    font-size: 18px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    width: max-content;
+    
+}
+.link-menu-redireccion{
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: aliceblue;
+    text-decoration: none;
+}
+.link-menu-redireccion:hover{
+    border-radius: 20px;
+   background-color: #7ab005;
+   transition: 0.8s;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    width: 1500px;
+    max-width: 1300px; 
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #4CAF50;
+    margin-top: 250px;
+    height: 700px;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group {
+    width: 48%;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.form-group label span.material-icons {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #314D1C; 
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button {
+    background-color: #114004;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.buttons button:hover {
+    background-color:  #7ab005;
+}
+
+.buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.margen1{
+    background-color: #114004;
+    position: absolute;
+    margin-top: 1550px;
+    margin-left: -30px;
+    width:1550px; 
+    height:400px;
+}
+
+@media (max-width: 768px) {
+    .form-section {
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+}

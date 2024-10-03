@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+    <link rel="stylesheet" href="{% static 'css/Usuario.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stilo.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="margen">
+    </div>
+    <!-- <header class="header"> -->
+        
+        <a class="volver" ttile="Industrias LEB" href="{% url 'indexcarucel' %}">
+            <img src="{% static 'imagenes/logo leb.png' %}" alt="" width="120px" height="100px">
+        </a>
+        
+        <nav class="navegador">
+            <a href="{% url 'usuario' %}">
+                <img class="login" src="{% static 'iconos/person_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg' %}" alt="" width="50px" height="50px">
+            </a>
+            <ul class="redirecciones">
+                <li class="Item-menu">
+                    <a href="{% url 'OrdenTrabajo' %}" class="link-menu-redireccion nav-link" title="Orden de trabajo">Orden Trabajo</a>
+                </li>
+                <li class="Item-menu">
+                    <a href="{% url 'actividad' %}" class="link-menu-redireccion nav-link" title="Actividad">Actividad</a>
+                </li>
+                <li class="Item-menu">
+                    <a href="{% url 'facturacion' %}" class="link-menu-redireccion nav-link" title="Facturación">Facturación</a>
+                </li>
+                <li class="Item-menu">
+                    <a href="{% url 'facturas' %}" class="link-menu-redireccion nav-link" title="Facturas">Facturas</a>
+                </li>
+                <li class="Item-menu">
+                    <a href="{% url 'maquinaria' %}" class="link-menu-redireccion nav-link" title="Maquinaria">Maquinaria</a>
+                </li>
+                <li class="Item-menu">
+                    <a href="{% url 'operario' %}" class="link-menu-redireccion nav-link" title="Operario">Operario</a>
+                </li>
+                <li class="Item-menu">
+                    <a href="{% url 'insumoproveedor' %}" class="link-menu-redireccion nav-link" title="Proveedor e Insumo">Proveedor-Insumo</a>
+                </li>
+                <li class="Item-menu">
+                    <a href="{% url 'inventario' %}" class="link-menu-redireccion nav-link" title="Inventario">Inventario</a>
+                </li>
+                <li class="Item-menu">
+                    <a href="{% url 'clientes' %}" class="link-menu-redireccion nav-link" title="Clientes">Clientes</a>
+                </li>
+            </ul>
+        </nav>
+        
+    <!-- </header> -->
+
+    <div class="containerFormulario" id="header">
+        <div class="persona" title="login" id="header">
+            <img src="{% static 'iconos/account_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg' %}" alt="" width="200px" height="200px">
+        </div>
+
+        <form action="">
+            <label title="Tipo documento" for="tipoDocumento">Tipo de Documento</label>
+            <select class="input"  id="formulario" title="Seleccione su tipo de documento">
+                <option value=""  selected>- </option>
+                <option title="Cédula Ciudadania" value="Cédula Ciudadania">Cédula Ciudadania</option>
+                <option title="Cédula Extrangeria" value="Cédula Extrangeria">Cédula Extrangeria</option>
+                <option title="Pasaporte" value="Pasaporte">Pasaporte</option>
+            </select>
+            <label title="Número documento" for="primerNombre">Número Documento</label>
+            <input title="Ingrese su número de documento" class="input" id="formulario" type="text"  placeholder="Ingrese su número de documento">
+
+            <label title="Primer nombre" for="primerNombre">Primer Nombre</label>
+            <input title="Ingrese su primer nombre" class="input" id="formulario" type="text" id="primerNombre" name="primerNombre" placeholder="Ingrese su primer nombre">
+
+            <label title="Segundo nombre" for="segundoNombre">Segundo Nombre</label>
+            <input title="Ingrese su segundo nombre" class="input" id="formulario" type="text" id="segundoNombre" name="segundoNombre" placeholder="Ingrese su segundo nombre">
+
+            <label title="Primer apellido" for="primerApellido">Primer Apellido</label>
+            <input title="Ingrese su primer apellido" class="input" id="formulario" type="text" id="primerApellido" name="primerApellido" placeholder="Ingrese su primer apellido">
+
+            <label title="Segundo apellido" for="segundoApellido">Segundo Apellido</label>
+            <input title="Ingrese su segundo apellido" class="input" id="formulario" type="text" id="segundoApellido" name="segundoApellido" placeholder="Ingrese su segundo apellido">
+
+            <label title="Correo electronico" for="email">Correo Electrónico</label>
+            <input title="Ingrese su correo electrónico" class="input" id="formulario" type="email" id="email" name="email" placeholder="Ingrese su correo electrónico">
+
+            <label title="Tipo documento" for="tipoDocumento">ROL</label>
+            <select class="input"  id="formulario" title="Seleccione su rol" >
+                <option value="" selected>-</option>
+                <option title="Jefe" value="Jefe">Jefe</option>
+                <option title="Secretario" value="Secretario">Secretario</option>
+            </select>
+
+            <label title="RH" for="rh">RH</label>
+            <input title="Ingrese su RHJ" class="input" id="formulario" type="text" id="rh" name="rh" placeholder="Ingrese su RH">
+
+            <label title="ARL" for="arl">ARL</label>
+            <input title="Ingrese su ARL" class="input" id="formulario" type="text" id="arl" name="arl" placeholder="Ingrese su ARL">
+
+            <label title="EPS" for="eps">EPS</label>
+            <input title="Ingrese su EPS" class="input" id="formulario" type="text" id="eps" name="eps" placeholder="Ingrese su EPS">
+
+            <div class="botones">
+                <button title="Agregar" class="boton" type="button">Agregar</button>
+                <button title="Buscar" class="boton" type="button">Buscar</button>
+                <button title="Modificar" class="boton" type="button">Modificar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="margen1">
+        
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Contenido del footer si lo tienes -->
+    </footer>
+    <body class="normal-text">
+        <div class="accessibility-container" title="Accesibilidad">
+            <div class="accessibility-icon" id="accessibilityIcon">
+                <i class="fas fa-universal-access"></i>
+            </div>
+            <div class="accessibility-menu" id="accessibilityMenu">
+                <div class="menu-item" data-action="increase-text">
+                    <i class="fas fa-plus"></i>
+                    <span title="Aumentar texto">Aumentar texto</span>
+                </div>
+                <div class="menu-item" data-action="decrease-text">
+                    <i class="fas fa-minus"></i>
+                    <span title="Disminuir texto">Disminuir texto</span>
+                </div>
+                <div class="menu-item" data-action="high-contrast">
+                    <i class="fas fa-low-vision"></i>
+                    <span tilte="Contraste">Contraste alto</span>
+                </div>
+                <div class="menu-item" data-action="activate-reader">
+                    <i class="fas fa-volume-up"></i>
+                    <span title="Activar lector">Activar lector</span>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'js/scrip.js' %}"></script>
+    </body>
+</body>
+</html>

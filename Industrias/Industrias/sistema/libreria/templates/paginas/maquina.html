@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Maquinaria</title>
+  <link rel="stylesheet" href="{% static 'css/maquina.css' %}">
+  <link rel="stylesheet" href="{% static 'css/stilo.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <div class="margen"></div>
+    
+    <a class="volver" title="Industrias LEB" href="{% url 'indexcarucel' %}"><img src="{% static 'imagenes/logo leb.png' %}" alt="" width="120px" height="100px" ></a>
+  <nav class="navegardor">
+    <a href="{% url 'usuario' %}">
+        <img class="login" title="Login" src="{% static 'iconos/person_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg' %}" alt="" width="50px" height="50px">
+    </a>
+    <ul class="redirecciones .redirecciones_visible">
+        <li class="Item-menu">
+            <a href="{% url 'OrdenTrabajo' %}" class="link-menu-redireccion nav-link" title="Orden de trabajo">Orden Trabajo</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'actividad' %}" class="link-menu-redireccion nav-link" title="Actividad">Actividad</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'facturacion' %}" class="link-menu-redireccion nav-link" title="Facturación">Facturación</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'facturas' %}" class="link-menu-redireccion nav-link" title="Facturas">Facturas</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'maquinaria' %}" class="link-menu-redireccion nav-link" title="Maquinaria">Maquinaria</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'operario' %}" class="link-menu-redireccion nav-link" title="Operario">Operario</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'insumoproveedor' %}" class="link-menu-redireccion nav-link" title="Proveedor e Insumo">Proveedor-Insumo</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'inventario' %}" class="link-menu-redireccion nav-link" title="Inventario">Inventario</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'clientes' %}" class="link-menu-redireccion nav-link" title="Clientes">Clientes</a>
+        </li>
+    </ul>
+</nav>
+<div class="margen1"></div>
+
+  <form class="formulario" id="header">
+    <h1 title="Registro maquinaria" class="titulo">Registro de Maquinaria</h1>
+    <label title="Número de maquina" for="numeroMaquina">  
+    <img src="{% static 'Imagenes1/excavador .png' %}" alt=""> Número de Máquina:</label>
+    <input title="Ingrese el número de la maquina" class="input" class="input" type="text" id="numeroMaquina" name="numeroMaquina" placeholder="Ingrese número de la maquina"><br>
+    <label title="Nombre de la maquina" for="Nombremaquinaria">
+      <img src="{% static 'Imagenes1/nombreMaquina.png' %}" alt=""> Nombre Maquinaria:</label>
+    <input title="Ingrese el nombre de la maquina" class="input" class="input" type="text" id="Nombremaquinaria" name="Nombremaquinaria" placeholder="Ingrese nombre de lamaquina"><br>
+
+    <label title="Estado" for="estado">
+    <img src="{% static 'Imagenes1/senal-de-alerta.png' %}" alt="">    Estado:</label>
+    <select title="Seleccione el estado en el que se encuentra la maquina" class="input" class="input" class="formulario2" id="estado" name="estado" >
+      <option  class="input" value="">-</option>
+      <option title="Operativo" class="input" value="Operativo">Operativo</option>
+      <option title="Mantenimiento" class="input" value="Mantenimiento">Mantenimiento</option>
+      <option title="Fuera de servicio" class="input" value="Fuera de Servicio">Fuera de Servicio</option>
+    </select><br>
+
+    <label title="Función" for="funcion"><img src="{% static 'Imagenes/configuraciones.png' %}" alt="">   Función:</label>
+    <textarea title="Ingrese la función de la maquina" class="input" class="input" id="funcion" name="funcion" rows="5" cols="30" placeholder="Ingrese la función de la maquina"></textarea><br>
+
+    <button title="Agregar" type="submit">Agregar</button>
+    <button title="Buscar" type="submit">Buscar</button>
+    <button title="Modificar" type="submit">Modificar</button>
+    <button title="Eliminar" type="submit">Eliminar</button>
+  </form>
+
+  <div id="mensajes"></div>
+  <script src="maquina.js"></script>
+  <body class="normal-text">
+    <div class="accessibility-container" title="Accesibilidad">
+        <div class="accessibility-icon" id="accessibilityIcon">
+            <i class="fas fa-universal-access"></i>
+        </div>
+        <div class="accessibility-menu" id="accessibilityMenu">
+            <div class="menu-item" data-action="increase-text">
+                <i class="fas fa-plus"></i>
+                <span title="Aumentar texto">Aumentar texto</span>
+            </div>
+            <div class="menu-item" data-action="decrease-text">
+                <i class="fas fa-minus"></i>
+                <span title="Disminuir texto">Disminuir texto</span>
+            </div>
+            <div class="menu-item" data-action="high-contrast">
+                <i class="fas fa-low-vision"></i>
+                <span tilte="Contraste">Contraste alto</span>
+            </div>
+            <div class="menu-item" data-action="activate-reader">
+                <i class="fas fa-volume-up"></i>
+                <span title="Activar lector">Activar lector</span>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/scrip.js' %}"></script>
+</body>
+</body>
+</html>

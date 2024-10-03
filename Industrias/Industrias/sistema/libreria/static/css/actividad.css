@@ -1,0 +1,173 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    letter-spacing: 0.5px;
+}
+
+.form-container {
+    position: absolute;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px #4CAF50;
+    margin-top: 150px;
+    margin-left: 350px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 24px; /* Tamaño del título ajustado */
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Ajusta la barra de búsqueda a la izquierda */
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Ancho ajustado para la entrada de texto */
+    margin-right: 10px;
+}
+
+.search-form button {
+    padding: 10px 15px;
+    border: 2px solid #114004;
+    background-color:  #114004;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat para el botón */
+}
+
+.search-form button:hover {
+    background-color: #7ab005;
+    color: white;
+    border: none;
+}
+
+.header-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.header-table th {
+    background-color: #114004;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.header-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#tabla-inventario {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabla-inventario th, #tabla-inventario td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.actions button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 2px solid #114004;
+    background-color: #114004;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat para el botón */
+}
+
+.actions button:hover {
+    background-color: #7ab005;
+    color: #ffffff;
+    border: none;
+}
+.navegador{
+    display: flex;
+    justify-content: space-between;
+}
+.volver{
+    position: absolute;
+    margin-top: -1px;
+    margin-left: 15px;
+    
+}
+.margen {
+    position: absolute;
+    width: 1535px;
+    height: 100px;
+    background-color: #114004;
+}
+.login{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1430px;
+}
+.login:hover{
+    border-radius: 50px;
+    background-color: #7ab005;
+    transition: 0.8s;
+}
+.redirecciones{
+    position: absolute;
+    margin-top: 40px;
+    display: flex;
+    margin-left: 340px;
+    list-style: none;
+    font-weight: bold;
+    font-size: medium;
+   
+}
+.item-menu{
+    font-size: 18px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    width: max-content;
+    
+}
+.link-menu-redireccion{
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: aliceblue;
+    text-decoration: none;
+}
+.link-menu-redireccion:hover{
+    border-radius: 20px;
+   background-color: #7ab005;
+   transition: 0.8s;
+}
+.margen1{
+    background-color: #114004;
+    position: absolute;
+    margin-top: 800px;
+    margin-left: -30px;
+    width:1550px; 
+    height:400px;
+}

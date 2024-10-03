@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.rectangulo {
+    position: absolute;
+    width: 1535px;
+    height: 100px;
+    background-color: #114004;
+}
+
+.volver {
+    position: absolute;
+    margin-top: -1px;
+    margin-left: 20px;
+}
+
+.login {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 1440px;
+}
+
+.contenedor{
+    position:absolute;
+    margin-top: 200px;
+    margin-left: 500px;
+    width: 800px;
+    height: 800px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0 10px #4CAF50;
+}
+
+.titulo{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 250px;
+    text-align: center; 
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.tituloTrabajo{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+.autocompletado{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 250px;
+}

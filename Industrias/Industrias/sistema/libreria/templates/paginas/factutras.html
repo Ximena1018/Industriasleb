@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturas</title>
+    <link rel="stylesheet" href="{% static 'css/factura.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stilo.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="margen" >
+        
+    </div>
+    <a class="volver" title="Industrias LEB" href="{% url 'indexcarucel' %}">
+        <img src="{% static 'imagenes/logo leb.png' %}" alt="" width="120px" height="100px">
+    </a>
+    <div class="container" id="header">
+        <h1 title="Facturas">Facturas</h1>
+        <div id="tabla-factura">
+            
+        </div>
+    </div>
+
+    <script>
+        // Simulación de datos de factura (formato JSON)
+        var facturas = [
+            {
+                "id": 1,
+                "fecha": "20/05/2024",
+                "documento": "1056",
+                "nombre": "Maria",
+                "valorTotal": "25.00",
+                "numeroDeAbonos": 5,
+                "valorAbono": "200",
+                "tipoDePago": "pago de contado"
+            },
+            {
+                "id": 2,
+                "fecha": "20/05/2024",
+                "documento": "1057",
+                "nombre": "Juan",
+                "valorTotal": "30.00",
+                "numeroDeAbonos": 3,
+                "valorAbono": "100",
+                "tipoDePago": "pago de contado"
+            }
+        ];
+
+        // Función para generar la tabla de factura
+        function generarTablaFactura() {
+            var tabla = '<table>';
+            tabla += '<thead><tr>';
+            tabla += '<th title="ID">ID</th>';
+            tabla += '<th title="Fecha">Fecha</th>';
+            tabla += '<th title="Documento cliente">Documento Cliente</th>';
+            tabla += '<th title="Nombre">Nombre</th>';
+            tabla += '<th title="Valor total">Valor Total</th>';
+            tabla += '<th title="Numero de abonos">Número de Abonos</th>';
+            tabla += '<th title="Valor del abono">Valor del Abono</th>';
+            tabla += '<th title="Tipo pago">Tipo de Pago</th>';
+            tabla += '</tr></thead>';
+            tabla += '<tbody>';
+
+            for (var i = 0; i < facturas.length; i++) {
+                tabla += '<tr>';
+                tabla += '<td>' + facturas[i].id + '</td>';
+                tabla += '<td>' + facturas[i].fecha + '</td>';
+                tabla += '<td>' + facturas[i].documento + '</td>';
+                tabla += '<td>' + facturas[i].nombre + '</td>';
+                tabla += '<td>' + facturas[i].valorTotal + '</td>';
+                tabla += '<td>' + facturas[i].numeroDeAbonos + '</td>';
+                tabla += '<td>' + facturas[i].valorAbono + '</td>';
+                tabla += '<td>' + facturas[i].tipoDePago + '</td>';
+                tabla += '</tr>';
+            }
+
+            tabla += '</tbody></table>';
+            document.getElementById('tabla-factura').innerHTML = tabla;
+        }
+
+        // Llamar a la función para generar la tabla al cargar la página
+        window.onload = function() {
+            generarTablaFactura();
+        };
+    </script>
+
+    <nav class="navegador">
+        <a href="{% url 'usuario' %}">
+            <img class="login" title="Login" src="{% static 'iconos/person_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg' %}" alt="" width="50px" height="50px">
+        </a>
+        <ul class="redirecciones">
+            <li class="Item-menu">
+                <a href="{% url 'OrdenTrabajo' %}" class="link-menu-redireccion nav-link" title="Orden de trabajo">Orden Trabajo</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'actividad' %}" class="link-menu-redireccion nav-link" title="Actividad">Actividad</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'facturacion' %}" class="link-menu-redireccion nav-link" title="Facturación">Facturación</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'facturas' %}" class="link-menu-redireccion nav-link" title="Facturas">Facturas</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'maquinaria' %}" class="link-menu-redireccion nav-link" title="Maquinaria">Maquinaria</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'operario' %}" class="link-menu-redireccion nav-link" title="Operario">Operario</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'insumoproveedor' %}" class="link-menu-redireccion nav-link" title="Proveedor e Insumo">Proveedor-Insumo</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'inventario' %}" class="link-menu-redireccion nav-link" title="Inventario">Inventario</a>
+            </li>
+            <li class="Item-menu">
+                <a href="{% url 'clientes' %}" class="link-menu-redireccion nav-link" title="Clientes">Clientes</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="margen1">
+        
+    </div>
+    <body class="normal-text">
+        <div class="accessibility-container" title="Accesibilidad">
+            <div class="accessibility-icon" id="accessibilityIcon">
+                <i class="fas fa-universal-access"></i>
+            </div>
+            <div class="accessibility-menu" id="accessibilityMenu">
+                <div class="menu-item" data-action="increase-text">
+                    <i class="fas fa-plus"></i>
+                    <span title="Aumentar texto">Aumentar texto</span>
+                </div>
+                <div class="menu-item" data-action="decrease-text">
+                    <i class="fas fa-minus"></i>
+                    <span title="Disminuir texto">Disminuir texto</span>
+                </div>
+                <div class="menu-item" data-action="high-contrast">
+                    <i class="fas fa-low-vision"></i>
+                    <span title="Contraste alto">Contraste alto</span>
+                </div>
+                <div class="menu-item" data-action="activate-reader">
+                    <i class="fas fa-volume-up"></i>
+                    <span title="Activar lector">Activar lector</span>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'js/scrip.js' %}"></script>
+    </body>
+</body>
+</html>

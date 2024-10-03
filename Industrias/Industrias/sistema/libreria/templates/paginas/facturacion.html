@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguimiento de Facturación</title>
+  <link rel="stylesheet" href="{% static 'css/facturacion.css' %}">
+  <link rel="stylesheet" href="{% static 'css/stilo.css' %}">
+  {% comment %} <script src="{% static 'facturacion.js' %}"></script> {% endcomment %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <div class="margen"> </div>
+  <a class="volver" title="Industrias LEB" href="{% url 'indexcarucel' %}"><img src="{% static 'imagenes/logo leb.png' %}" alt="" width="120px" height="100px" ></a>
+  <nav class="navegardor">
+    <a href="{% url 'usuario' %}">
+        <img class="login" title="Login" src="{% static 'iconos/person_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg' %}" alt="" width="50px" height="50px">
+    </a>
+    <ul class="redirecciones .redirecciones_visible" >
+      <li class="Item-menu">
+          <a href="{% url 'OrdenTrabajo' %}" class="link-menu-redireccion nav-link" title="Orden de trabajo">Orden Trabajo</a>
+      </li>
+      <li class="Item-menu">
+          <a href="{% url 'actividad' %}" class="link-menu-redireccion nav-link" title="Actividad">Actividad</a>
+      </li>
+      <li class="Item-menu">
+          <a href="{% url 'facturacion' %}" class="link-menu-redireccion nav-link" title="Facturación">Facturación</a>
+      </li>
+      <li class="Item-menu">
+          <a href="{% url 'facturas' %}" class="link-menu-redireccion nav-link" title="Facturas">Facturas</a>
+      </li>
+      <li class="Item-menu">
+          <a href="{% url 'maquinaria' %}" class="link-menu-redireccion nav-link" title="Maquinaria">Maquinaria</a>
+      </li>
+      <li class="Item-menu">
+          <a href="{% url 'operario' %}" class="link-menu-redireccion nav-link" title="Operario">Operario</a>
+      </li>
+      <li class="Item-menu">
+          <a href="{% url 'insumoproveedor' %}" class="link-menu-redireccion nav-link" title="Proveedor e Insumo">Proveedor-Insumo</a>
+      </li>
+      <li class="Item-menu">
+          <a href="{% url 'inventario' %}" class="link-menu-redireccion nav-link" title="Inventario">Inventario</a>
+      </li>
+      <li class="Item-menu">
+          <a href="{% url 'clientes' %}" class="link-menu-redireccion nav-link" title="Clientes">Clientes</a>
+      </li>
+      
+    </ul>
+</nav>
+<div class="margen1"></div>
+
+  <div class="container" id="header">
+    <h1 class="titulo" title="Seguimiento facturación">Seguimiento de Facturación</h1>
+    <form id="facturaForm" class="formulario">
+      <div class="form-group">
+        <label for="fecha" title="Fecha">
+          <img src="{% static 'iconos/icono1.png' %}" alt="Icono Fecha"> Fecha:
+        </label>
+        <input title="Ingrese la fecha de la factura" class="input" type="date" id="fecha" name="fecha" placeholder="Ingrese fecha de factura">
+      </div>
+      <div class="form-group">
+        <label title="Documento" for="documento">
+          <img src="{% static 'iconos/icono2.png' %}" alt="Icono Documento"> Documento del Cliente:
+        </label>
+        <input title="Ingrese el documento del cliente" class="input" type="text" id="documento" name="documento" placeholder="Ingrese documento del cliente">
+      </div>
+      <div class="form-group">
+        <label title="Nombre Cliente" for="nombre">
+          <img src="{% static 'iconos/icono3.png' %}" alt="Icono Nombre"> Nombre del Cliente:
+        </label>
+        <input title="Ingrese el nombre del cliente" class="input" type="text" id="nombre" name="nombre" placeholder="Ingrese nombre del cliente">
+      </div>
+      <div class="form-group">
+        <label title="Valor total" for="valorTotal">
+          <img src="{% static 'iconos/icono4.png' %}" alt="Icono Valor"> Valor Total:
+        </label>
+        <input title="Ingrese el valor total del trabajo" class="input" type="valortotal" id="valorTotal" name="valorTotal" placeholder="Ingrese valor total" >
+      </div>
+      <div class="form-group">
+        <label title="Número de abonos" for="numAbonos">
+          <img src="{% static 'iconos/icono5.png' %}" alt="Icono Abonos"> Número de Abonos:
+        </label>
+        <input title="Ingrese la cantidad de abonos" class="input" type="numerodeabonos" id="valorAbono" name="Abono" placeholder="Ingrese número de abono" >
+      </div>
+      <div class="form-group">
+        <label title="Valor del abono" for="valorAbono">
+          <img src="{% static 'iconos/icono5.png' %}" alt="Icono Valor Abono"> Valor del Abono:
+        </label>
+        <input title="Ingrese el valor del abono" class="input" type="valorabono" id="valorAbono" name="valorAbono" placeholder=" Ingrese valor del abono" >
+      </div>
+      <div class="form-group">
+        <label title="Cuotas" for="numAbonos">
+          <img src="{% static 'iconos/icono5.png' %}" alt="Icono Abonos"> Número de Abonos:
+        </label>
+        <select  title="Seleccione el tipo de abono" class="input" id="numAbonos" class="numAbonos" name="numAbonos">
+          <option value="0">- </option>
+          <option title="Pago de contado" value="0">Pago De Contado </option>
+          <option title="Abono a 15 dias" value="1">abono a 15 dias</option>
+          <option title="Abono a 30 dias" value="2">abono a 30 dias</option>
+          <option title="Abono a 60 dias" value="3">abono a 60 dias</option>
+        </select>
+      </div>
+
+      <div class="btn">
+        <button title="Listar" type="button" onclick="listar()">Listar</button>
+        <button title="Modificar" type="button" onclick="modificar()">Modificar</button>
+        <button title="Guardar" type="submit">Guardar</button>
+        <a href="{% url 'facturas' %}" title="Ver facturas" class="ver-factura"><button type="button">VER FACTURAS</button></a>
+
+
+      </div>
+    </form>
+  </div>
+  {% comment %} <script src="{% static 'script.js' %}"></script> {% endcomment %}
+  <body class="normal-text">
+    <div class="accessibility-container" title="Accesibilidad">
+        <div class="accessibility-icon" id="accessibilityIcon">
+            <i class="fas fa-universal-access"></i>
+        </div>
+        <div class="accessibility-menu" id="accessibilityMenu">
+            <div class="menu-item" data-action="increase-text">
+                <i class="fas fa-plus"></i>
+                <span title="Aumentar texto">Aumentar texto</span>
+            </div>
+            <div class="menu-item" data-action="decrease-text">
+                <i class="fas fa-minus"></i>
+                <span title="Disminuir texto">Disminuir texto</span>
+            </div>
+            <div class="menu-item" data-action="high-contrast">
+                <i class="fas fa-low-vision"></i>
+                <span title="Contraste alto">Contraste alto</span>
+            </div>
+            <div class="menu-item" data-action="activate-reader">
+                <i class="fas fa-volume-up"></i>
+                <span title="Activar lector">Activar lector</span>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/scrip.js' %}"></script>
+</body>
+</body>
+</html>

@@ -1,0 +1,146 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #efefef; /* Color de fondo claro */
+  }
+  #formulario h1{
+    text-align: center;
+  }
+  
+  header {
+    background-color: #333; /* Color de fondo para el encabezado */
+    color: #fff; /* Color de texto para el encabezado */
+    padding: 20px;
+    text-align: center;
+    border: 15px;
+  }
+  
+  h1 {
+    margin: 50px; /* Eliminar margen superior del título */
+    margin-top: -10px;
+  }
+  
+  .formulario {
+    position: absolute;
+    width: 680px; /* Aumentar ancho del formulario */
+    margin: 60px;
+    box-shadow: 0 0 10px #4CAF50;
+    padding: 30px;
+    margin-left: 400px;
+    margin-top: 150px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 10px #4CAF50; /* Sombra sutil */
+    background-color: white;
+    border: 2px solid #4CAF50;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: medium;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 650px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    border-radius: 15px; /* Bordes redondeados para los campos */
+  }
+  
+  button {
+    background-color: #114004;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 15px; /* Bordes redondeados para el botón */
+    cursor: pointer;
+    margin-left: 34px;
+  }
+  button:hover {
+    background-color:  #7ab005;
+  }
+  #mensajes {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+  }
+  .formulario2{
+    width: 673px;
+  }
+  .navegador{
+    display: flex;
+    justify-content: space-between;
+}
+.volver{
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 15px;
+    
+}
+.margen {
+  position: absolute;
+  width: 1535px;
+  height: 100px;
+  background-color: #114004;
+  margin-top: -20px;
+}
+.login{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 1430px;
+}
+.login:hover{
+    border-radius: 50px;
+    background-color: #7ab005;
+    transition: 0.8s;
+}
+.redirecciones{
+    position: absolute;
+    margin-top: 20px;
+    display: flex;
+    margin-left: 380px;
+    list-style: none;
+    font-weight: bold;
+    font-size: medium;
+   
+}
+.item-menu{
+    font-size: 18px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    width: max-content;
+    
+}
+.link-menu-redireccion{
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: aliceblue;
+    text-decoration: none;
+}
+.link-menu-redireccion:hover{
+    border-radius: 20px;
+   background-color: #7ab005;
+   transition: 0.8s;
+}
+.margen1{
+  background-color: #114004;
+  position: absolute;
+  margin-top: 900px;
+  margin-left: -30px;
+  width:1550px; 
+  height:400px;
+}
+
+.titulo{
+  margin-left: 160px;
+}
+
+.input{
+  background-color: #fff;
+}

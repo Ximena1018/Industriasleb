@@ -1,0 +1,107 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tamaño de texto por defecto */
+body.normal-text {
+    font-size: 16px;
+}
+
+/* Tamaño de texto pequeño */
+body.small-text {
+    font-size: 12px;
+}
+
+/* Tamaño de texto grande */
+body.large-text {
+    font-size: 24px;
+}
+
+/* Tamaño de texto muy grande */
+body.extra-large-text {
+    font-size: 32px;
+}
+
+/* Modo de alto contraste */
+body.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Contenedor de accesibilidad */
+.accessibility-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Icono de accesibilidad */
+.accessibility-icon {
+    background-color: #008000; /* Verde profesional */
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.accessibility-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Menú de accesibilidad */
+.accessibility-menu {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.accessibility-menu.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Elementos del menú */
+.menu-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateX(5px);
+    background-color: #f1f1f1;
+}
+
+.menu-item i {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #008000; /* Verde profesional */
+}
+
+/* Estilos para el menú en modo alto contraste */
+body.high-contrast .menu-item {
+    background-color: #333;
+    color: #fff;
+}
+
+body.high-contrast .menu-item:hover {
+    background-color: #444;
+}

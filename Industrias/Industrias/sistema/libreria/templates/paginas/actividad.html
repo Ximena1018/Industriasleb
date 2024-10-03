@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Orden de Trabajo</title>
+    <link rel="stylesheet" href="{% static 'css/actividad.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stilo.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="margen"></div>
+    
+    <a class="volver" title="Industrias LEB" href="{% url 'indexcarucel' %}"><img src="{% static 'imagenes/logo leb.png' %}" alt="" width="120px" height="100px" ></a>
+  <nav class="navegardor">
+    <a href="{% url 'usuario' %}">
+        <img class="login" title="Login" src="{% static 'iconos/person_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg' %}" alt="" width="50px" height="50px">
+    </a>
+    <ul class="redirecciones .redirecciones_visible">
+        <li class="Item-menu">
+            <a href="{% url 'OrdenTrabajo' %}" class="link-menu-redireccion nav-link" title="Orden de trabajo">Orden Trabajo</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'actividad' %}" class="link-menu-redireccion nav-link" title="Actividad">Actividad</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'facturacion' %}" class="link-menu-redireccion nav-link" title="Facturación">Facturación</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'facturas' %}" class="link-menu-redireccion nav-link" title="Facturas">Facturas</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'maquinaria' %}" class="link-menu-redireccion nav-link" title="Maquinaria">Maquinaria</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'operario' %}" class="link-menu-redireccion nav-link" title="Operario">Operario</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'insumoproveedor' %}" class="link-menu-redireccion nav-link" title="Proveedor e Insumo">Proveedor-Insumo</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'inventario' %}" class="link-menu-redireccion nav-link" title="Inventario">Inventario</a>
+        </li>
+        <li class="Item-menu">
+            <a href="{% url 'clientes' %}" class="link-menu-redireccion nav-link" title="Clientes">Clientes</a>
+        </li>
+    </ul>
+</nav>
+<div class="margen1"></div>
+
+    <div class="form-container" id="header">
+        <div class="header" id="header">
+            <h2 title="Registro orden de trabajo">REGISTRO ORDEN DE TRABAJO</h2>
+            <form class="search-form" id="header">
+                <input title="Ingrese la orden que desea buscar" class="input" type="text" id="search" name="search" placeholder="Buscar...">
+                <button title="Buscar" type="button">Buscar</button>
+            </form>
+        </div>
+        
+        <!-- Table for displaying the header -->
+        <table class="header-table" id="header1">
+            <thead id="header">
+                <tr>
+                    <th title="Numero de orden">Número de Orden</th>
+                    <th title="Operario">Operario</th>
+                    <th title="Maquina">Máquina</th>
+                    <th title="Estado">Estado</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-inventario">
+                <!-- Aquí se generará dinámicamente la tabla -->
+            </tbody>
+        </table>
+
+        <!-- Actions buttons -->
+        <div class="actions" id="header">
+            <button title="Buscar" type="button">Buscar Orden</button>
+            <button title="Modificar" type="button">Modificar</button>
+        </div>
+        
+    </div>
+
+    <script>
+        // Simulación de datos de inventario (formato JSON)
+        var inventario = [
+            {
+                "numero_orden": "001",
+                "operario": "Juan Pérez",
+                "maquina": "Máquina A",
+                "estado": "En Proceso"
+            },
+            {
+                "numero_orden": "002",
+                "operario": "María López",
+                "maquina": "Máquina B",
+                "estado": "Completada"
+            }
+            // Puedes añadir más elementos según sea necesario
+        ];
+
+        // Función para generar la tabla de inventario
+        function generarTablaInventario() {
+            var tabla = '';
+
+            for (var i = 0; i < inventario.length; i++) {
+                tabla += '<tr>';
+                tabla += '<td>' + inventario[i].numero_orden + '</td>';
+                tabla += '<td>' + inventario[i].operario + '</td>';
+                tabla += '<td>' + inventario[i].maquina + '</td>';
+                tabla += '<td>' + inventario[i].estado + '</td>';
+                tabla += '</tr>';
+            }
+
+            document.getElementById('tabla-inventario').innerHTML = tabla;
+        }
+
+        // Llamar a la función para generar la tabla al cargar la página
+        window.onload = function() {
+            generarTablaInventario();
+        };
+    </script>
+    <body class="normal-text">
+        <div class="accessibility-container" title="Accesibilidad">
+            <div class="accessibility-icon" id="accessibilityIcon">
+                <i class="fas fa-universal-access"></i>
+            </div>
+            <div class="accessibility-menu" id="accessibilityMenu">
+                <div class="menu-item" data-action="increase-text">
+                    <i class="fas fa-plus"></i>
+                    <span title="Aumentar texto">Aumentar texto</span>
+                </div>
+                <div class="menu-item" data-action="decrease-text">
+                    <i class="fas fa-minus"></i>
+                    <span title="Disminuir texto">Disminuir texto</span>
+                </div>
+                <div class="menu-item" data-action="high-contrast">
+                    <i class="fas fa-low-vision"></i>
+                    <span title="Contraste alto">Contraste alto</span>
+                </div>
+                <div class="menu-item" data-action="activate-reader">
+                    <i class="fas fa-volume-up"></i>
+                    <span title="Activar lector">Activar lector</span>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'js/scrip.js' %}"></script>
+    </body>
+</body>
+</html>

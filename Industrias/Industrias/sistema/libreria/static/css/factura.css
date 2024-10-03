@@ -1,0 +1,119 @@
+
+.navegador{
+    display: flex;
+    justify-content: space-between;
+}
+
+.volver{
+    position: absolute;
+    margin-top: -2px;
+    margin-left: 40px;
+    
+}
+.margen {
+    position: absolute;
+    width: 1535px;
+    height: 100px;
+    background-color: #114004;
+}
+.login{
+    position: absolute;
+    margin-top: 16px;
+    margin-left: 1440px;
+}
+.login:hover{
+    border-radius: 50px;
+    background-color: green;
+    transition: 0.8s;
+}
+.redirecciones{
+    position: absolute;
+    margin-top: 38px;
+    display: flex;
+    margin-left: 400px;
+    list-style: none;
+    font-weight: bold;
+    font-size: medium;
+   
+}
+.item-menu{
+    font-size: 18px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    width: max-content;
+    
+}
+.link-menu-redireccion{
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: aliceblue;
+    text-decoration: none;
+}
+.link-menu-redireccion:hover{
+    border-radius: 20px;
+   background-color: #7ab005;
+   transition: 0.8s;
+}
+.margen1{
+    background-color: #114004;
+    position: absolute;
+    margin-top: 800px;
+    margin-left: -30px;
+    width:1550px; 
+    height:400px;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    max-width: 1200px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #4CAF50;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    margin-top: 200px;
+    margin-left: 135px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed; /* Ajuste para el tamaño de la tabla */
+}
+
+table, td {
+    border: 1px solid #4CAF50;
+    padding: 8px; /* Reducción en el padding para hacer la tabla más compacta */
+    text-align: left;
+    word-wrap: break-word; /* Ajuste para palabras largas */
+}
+th{
+    color: #fff;
+    align-items: center;
+}
+thead {
+    background-color: #114004;
+}
+
+th {
+    font-size: 14px; /* Ajuste del tamaño de fuente para evitar amontonamiento */
+    padding: 10px; /* Incremento del padding para mejor visualización */
+}
+
+td {
+    font-size: 14px; /* Ajuste del tamaño de fuente */
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad</title>
+    <link rel="stylesheet" href="stilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="normal-text">
+    <div class="accessibility-container">
+        <div class="accessibility-icon" id="accessibilityIcon">
+            <i class="fas fa-universal-access"></i>
+        </div>
+        <div class="accessibility-menu" id="accessibilityMenu">
+            <div class="menu-item" data-action="increase-text">
+                <i class="fas fa-plus"></i>
+                <span>Aumentar texto</span>
+            </div>
+            <div class="menu-item" data-action="decrease-text">
+                <i class="fas fa-minus"></i>
+                <span>Disminuir texto</span>
+            </div>
+            <div class="menu-item" data-action="high-contrast">
+                <i class="fas fa-low-vision"></i>
+                <span>Contraste alto</span>
+            </div>
+            <div class="menu-item" data-action="activate-reader">
+                <i class="fas fa-volume-up"></i>
+                <span>Activar lector</span>
+            </div>
+        </div>
+    </div>
+
+    <p id="test-text">Este es un texto de prueba. Hola pequeño muchacho </p>
+
+    <script src="scrip.js"></script>
+</body>
+</html>

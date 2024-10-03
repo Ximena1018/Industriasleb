@@ -1,0 +1,222 @@
+
+.navegador{
+    display: flex;
+    justify-content: space-between;
+}
+.volver{
+    position: absolute;
+    margin-top: -725px;
+    margin-left: -1360px;
+    
+}
+.margen {
+    position: absolute;
+    width: 1535px;
+    height: 100px;
+    background-color: #114004;
+    margin-top: -725px;
+}
+.login{
+    position: absolute;
+    margin-top: -395px;
+    margin-left: 685px;
+}
+.login:hover{
+    border-radius: 50px;
+    background-color: green;
+    transition: 0.8s;
+}
+.redirecciones{
+    position: absolute;
+    margin-top: -376px;
+    display: flex;
+    margin-left: -360px;
+    list-style: none;
+    font-weight: bold;
+    font-size: medium;
+   
+}
+.item-menu{
+    font-size: 18px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    width: max-content;
+    
+}
+.link-menu-redireccion{
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: aliceblue;
+    text-decoration: none;
+}
+.link-menu-redireccion:hover{
+    border-radius: 20px;
+   background-color: #7ab005;
+   transition: 0.8s;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    width: 90%;
+    max-width: 1500px; /* Ajusta el ancho máximo según el diseño */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px #4CAF50;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #4CAF50;
+    margin-top: 300px;
+    margin-left: 5px;
+}
+
+.titulo {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+    gap: 30%;
+}
+
+.formularios {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.form-group h2 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #114004;
+    
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 5px;
+    
+}
+
+.form-group label i.material-icons,
+.form-group h2 i.material-icons {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #314D1C;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #114004;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #7ab005;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button {
+    margin-right: 10px;
+}
+
+.ver-inventario {
+    text-decoration: none;
+}
+
+.ver-inventario button {
+    margin: 0;
+}
+.margen1{
+    background-color: #114004;
+    position: absolute;
+    margin-top: 1750px;
+    margin-left: -30px;
+    width:1550px; 
+    height:400px;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .formularios {
+        flex-direction: column;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
